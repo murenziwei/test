@@ -109,7 +109,7 @@ ul{
 }
 .content_hot{
     margin:50px 0;
-    max-width:1200px;
+    min-width:1200px;
 }
 .hot_all{
     display:flex;
