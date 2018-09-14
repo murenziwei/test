@@ -326,8 +326,7 @@
                   if(el.target.nodeName=="LI"){
                       document.querySelector(".banner_point").className="";
                       el.target.className="banner_point";
-                      console.log(el.target);
-                      console.log(el.target.attributes.name.value);
+                      
                       banner_content.style.backgroundImage="url("+arrays[el.target.attributes.name.value]["src"]+")";
                   }
               });
