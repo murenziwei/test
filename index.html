@@ -308,11 +308,11 @@
       <script>
           function initBanner(){
               var i=0;
-              var arrays=[{src:"pic/indexPic/banner/banner1.png"},{src:"pic/indexPic/banner/banner2.png"}];
+              var arrays=[{src:"./pic/indexPic/banner/banner1.png"},{src:"./pic/indexPic/banner/banner2.png"}];
               banner_content=document.getElementsByClassName("banner_content")[0];
-              banner_content.style.backgroundImage=`url('pic/indexPic/banner/banner1.png')`;
+              banner_content.style.backgroundImage="url('./pic/indexPic/banner/banner1.png')";
               function setT(){
-                  banner_content.style.backgroundImage=`url(${arrays[i]["src"]})`;
+                  banner_content.style.backgroundImage="url("+arrays[i]["src"]+")";
                   var ls=document.querySelectorAll(".banner_control>li")[i];
                   document.querySelector(".banner_point").className="";
                   ls.className="banner_point";
@@ -328,7 +328,7 @@
                       el.target.className="banner_point";
                       console.log(el.target);
                       console.log(el.target.attributes.name.value);
-                      banner_content.style.backgroundImage=`url(${arrays[el.target.attributes.name.value]["src"]})`;
+                      banner_content.style.backgroundImage="url("+arrays[el.target.attributes.name.value]["src"]+")";
                   }
               });
           }
